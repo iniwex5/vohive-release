@@ -2,7 +2,7 @@
 set -euo pipefail
 
 REPO="${VOHIVE_RELEASE_REPO:-iniwex5/vohive-release}"
-RAW_BASE="https://raw.githubusercontent.com/${REPO}/main"
+RAW_BASE="https://raw.githubusercontent.com/${REPO}/master"
 CHANNEL="stable"
 VERSION=""
 NO_SYSTEMD=0

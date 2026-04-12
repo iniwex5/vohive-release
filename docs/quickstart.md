@@ -3,7 +3,7 @@
 1. 安装 stable：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/iniwex5/vohive-release/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/iniwex5/vohive-release/master/install.sh | bash
 ```
 
 2. 查看服务状态：

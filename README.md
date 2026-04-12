@@ -5,25 +5,25 @@
 ## 一键安装
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/iniwex5/vohive-release/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/iniwex5/vohive-release/master/install.sh | bash
 ```
 
 指定版本：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/iniwex5/vohive-release/main/install.sh | bash -s -- --version v1.0.0
+curl -fsSL https://raw.githubusercontent.com/iniwex5/vohive-release/master/install.sh | bash -s -- --version v1.0.0
 ```
 
 仅安装二进制（不安装 systemd）：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/iniwex5/vohive-release/main/install.sh | bash -s -- --no-systemd
+curl -fsSL https://raw.githubusercontent.com/iniwex5/vohive-release/master/install.sh | bash -s -- --no-systemd
 ```
 
 卸载：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/iniwex5/vohive-release/main/uninstall.sh | bash
+curl -fsSL https://raw.githubusercontent.com/iniwex5/vohive-release/master/uninstall.sh | bash
 ```
 
 ## 目录
