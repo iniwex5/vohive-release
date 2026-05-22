@@ -140,23 +140,6 @@ CFG
   fi
 }
 
-disable_modemmanager() {
-  local unit="ModemManager.service"
-  local unit_info=""
-
-  unit_info="$(systemctl list-unit-files "${unit}" --no-legend 2>/dev/null || true)"
-  if [[ -z "${unit_info}" ]]; then
-    log "未检测到 ${unit}，跳过禁用"
-    return 0
-  fi
-
-  log "正在禁用 ${unit}，避免占用 QMI/AT 设备"
-  if ! run_root systemctl disable --now "${unit}"; then
-    err "禁用 ${unit} 失败"
-    exit 1
-  fi
-}
-
 install_systemd() {
   local tmp_unit="$1"
   cat > "${tmp_unit}" <<UNIT
@@ -269,7 +252,6 @@ main() {
 
   if [[ "${NO_SYSTEMD}" == "0" ]]; then
     need_cmd systemctl
-    disable_modemmanager
     local unit_tmp="${tmp}/vohive.service"
     if ! install_systemd "${unit_tmp}"; then
       rollback
